@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <title>Recycle Runner</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/p5play@3/lib/p5play.js"></script>
+  
+  <!-- Seu CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<script src="sketch.js"></script>
+  <div id="menu-home" class="overlay">
+    <h1>GEOMETRY TRASH</h1>
+    <p>Escolha um nível: </p>
+    
+    <div class="button-container">
+      <button onclick="iniciarJogo(1)" class="btn-lvl">Nível 01</button>
+      <button onclick="iniciarJogo(2)" class="btn-lvl">Nível 02</button>
+      <button onclick="iniciarJogo(3)" class="btn-lvl">Nível 03</button>
+    </div>
+  </div>
+
+  <button id="btn-home-game" class="btn-voltar-fixo hidden" onclick="voltarAoMenu()">
+    🏠 
+  </button>
+
+  <!-- Seu Código do Jogo -->
+  <script src="fase1.js"></script>
 
 </body>
 </html>
