@@ -1,7 +1,7 @@
 let player;
 let platforms = [];
 let spikes = [];
-let speed = 7.5; // Velocidade levemente aumentada para mais adrenalina
+let speed = 7.5; 
 let gameRunning = true;
 let canDoubleJump = false;
 let bonecoImg;
@@ -183,7 +183,7 @@ function victory() {
   fill(255);
   textSize(60);
   textAlign(CENTER);
-  text("DOMINADO! 100%", width/2, height/2);
+  text("PARABÉNS! 100%", width/2, height/2);
   textSize(25);
   text("Você zerou o nível!", width/2, height/2 + 60);
   noLoop();
