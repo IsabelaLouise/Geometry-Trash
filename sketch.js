@@ -193,11 +193,11 @@ function resetPlayer() {
   player = {
     x: 0,
     y: height - 300,
-    w: 55,
-    h: 55,
+    w: 65,
+    h: 65,
     vy: 0,
     gravity: 0.8, // Gravidade padrão para manter a dificuldade justa
-    jump: -16.5     
+    jump: -16     
   };
   canDoubleJump = true;
 }
