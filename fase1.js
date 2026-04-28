@@ -5,7 +5,7 @@ let platforms = [];
 let spikes = [];
 let gameRunning = true;
 let canDoubleJump = false;
-let speedMultiplier = 1; // Adicione isso
+let speedMultiplier = 1; 
 let bonecoImg;
 let fundoImg;
 let lixoImg;
@@ -14,7 +14,7 @@ let lixoImg;
 const SPEED = 500; 
 const GRAVITY = 3200;
 const JUMP_FORCE = -1000;
-const LEVEL_END = 18000; // Final ajustado para acabar junto com as plataformas
+const LEVEL_END = 18000; 
 
 // Função que o botão do HTML vai chamar
 function iniciarJogo(nivel) {
