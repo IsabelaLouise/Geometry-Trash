@@ -2,32 +2,90 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Recycle Runner</title>
+  <title>Geometry Trash</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/p5play@3/lib/p5play.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
   
   <!-- Seu CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="btnSom" onclick="toggleSom()">🔊</button>
 
   <div id="menu-home" class="overlay">
-    <h1>GEOMETRY TRASH</h1>
-    <p>Escolha um nível: </p>
-    
-    <div class="button-container">
-      <button onclick="iniciarJogo(1)" class="btn-lvl">Nível 01</button>
-      <button onclick="iniciarJogo(2)" class="btn-lvl">Nível 02</button>
-      <button onclick="iniciarJogo(3)" class="btn-lvl">Nível 03</button>
-    </div>
+      <h1>GEOMETRY TRASH</h1>
+      <p>Escolha um nível:</p>
+
+      <div class="button-container niveis">
+          <button onclick="iniciarJogo(1)" class="btn-lvl">Nível 01</button>
+          <button onclick="iniciarJogo(2)" class="btn-lvl">Nível 02</button>
+          <button onclick="iniciarJogo(3)" class="btn-lvl">Nível 03</button>
+      </div>
+      <br><p>Conheça o jogo:</p>
+      <div class="button-container menu-extra">
+          <button onclick="abrirSobre()" class="btn-lvl">SOBRE</button>
+          <button onclick="abrirComoJogar()" class="btn-lvl">COMO JOGAR</button>
+      </div>
   </div>
+  <!-- POPUP SOBRE -->
+  <div id="popupSobre" class="popup hidden">
+      <div class="popup-content">
+          <span class="fechar" onclick="fecharPopup('popupSobre')">&times;</span>
+          <h2>Sobre</h2>
+          <p>
+              <p>
+                O <strong>Geometry Trash</strong> é um jogo inspirado nos desafios urbanos 
+                relacionados ao lixo e à preservação dos espaços públicos. O jogador 
+                controla uma lata de lixo em movimento constante, precisando desviar de obstáculos 
+                e superar desafios para avançar sua pontuação nessa fase.
+                <br><br>
+                Este projeto foi desenvolvido por alunas do curso de
+                <strong>Sistemas de Informação (BSI)</strong> da
+                <strong>Pontifícia Universidade Católica do Paraná (PUCPR)</strong>,
+                unindo tecnologia, educação e sustentabilidade para criar uma experiência
+                interativa e significativa.
+
+                <br><br>
+
+                <strong>Desenvolvedoras:</strong><br>
+                • Edoarda Cenci Piraí<br>
+                • Fernanda Rodrigues Pinho<br>
+                • Isabela Louise da Costa Silva<br>
+                • Julia Mamus Portela<br>
+                • Julia Molina Bonfim<br>
+            </p>
+          </p>
+      </div>
+  </div>
+
+  <!-- POPUP COMO JOGAR -->
+  <div id="popupComoJogar" class="popup hidden">
+      <div class="popup-content">
+          <span class="fechar" onclick="fecharPopup('popupComoJogar')">&times;</span>
+          <h2>Como Jogar</h2>
+          <p>
+              O <strong>Geometry Trash</strong> possui uma jogabilidade simples e intuitiva.
+              Seu personagem é uma lata de lixo e, para vencer o jogo, você precisa desviar dos obstáculos (sacos de lixo), pulando sobre eles e se mantendo nas plataformas de grama sem cair.
+              <br><br>
+              Para realizar os saltos, pressione a tecla <strong>ESPAÇO</strong> ou a <strong>SETA PARA CIMA</strong> do teclado.
+              Caso seja necessário executar um salto duplo, basta pressionar a tecla duas vezes seguidas!
+              <br><br>
+              Desafie seus reflexos, supere os obstáculos e tente chegar o mais longe possível.
+              <br><br>
+              Esperamos que você goste do jogo!
+              <strong>Boa diversão! 🎮</strong>
+          </p>
+      </div>
+  </div>
+  
 
   <button id="btn-home-game" class="btn-voltar-fixo hidden" onclick="voltarAoMenu()">
     🏠 
   </button>
 
-  <!-- Seu Código do Jogo -->
-  <script src="fase1.js"></script>
+  <!-- Código do Jogo -->
+  <script src="jogo.js"></script>
 
 </body>
 </html>
