@@ -51,7 +51,7 @@ function iniciarJogo(nivel) {
 
     if (nivel === 1) speedMultiplier = 1;
     if (nivel === 2) speedMultiplier = 1.2;
-    if (nivel === 3) speedMultiplier = 1.4;
+    if (nivel === 3) speedMultiplier = 1.2 ;
 
     gameRunning = true;
     buildLevel();
@@ -274,15 +274,15 @@ function buildLevel3() {
 
   createSet(1200, 0.70, 300, true);
   createSet(1700, 0.55, 300, true);
-  createSet(2200, 0.60, 300, true);
-  createSet(2700, 0.50, 300, true);
+  createSet(2200, 0.60, 300, false);
+  createSet(2700, 0.50, 400, true);
 
   createSet(3400, 0.40, 250, true);
-  createSet(3900, 0.65, 250, true);
+  createSet(3900, 0.65, 250, false);
   createSet(4400, 0.60, 250, true);
   createSet(4900, 0.55, 250, true);
 
-  createSet(5600, 0.75, 250, true);
+  createSet(5500, 0.75, 350, true);
   createSet(6100, 0.65, 250, true);
   createSet(6600, 0.65, 250, true);
   createSet(7100, 0.55, 250, true);
