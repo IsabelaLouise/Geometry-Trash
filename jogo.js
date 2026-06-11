@@ -287,7 +287,7 @@ function buildLevel3() {
   createSet(6600, 0.65, 250, true);
   createSet(7100, 0.55, 250, true);
 
-  createSet(8000, 0.85, 500, false);
+  createSet(7800, 0.85, 700, false);
 
   createSet(8800, 0.70, 400, true);
   createSet(9500, 0.60, 250, true);
